@@ -1,5 +1,5 @@
 function imc(){
-    const formulario = document.getElementsByName("formulario")[0]
+    const formulario = document.getElementsByName("formulario")[1]
     const formDados = new FormData(formulario)
     const paciente = {
         nome:formDados.get("nome"),
@@ -29,5 +29,5 @@ function imc(){
     console.log(paciente)
     console.log(paciente.calcularIMC())
     let resposta=document.getElementById('resposta');
-    resposta.innerHTML="Seu IMC ÃO "+paciente.calcularIMC()+". " + "Sua classifição de peso ÃO " + paciente.classificação;
+    resposta.innerHTML="Seu IMC "+paciente.calcularIMC()+". " + "Sua classifição de peso E " + paciente.classificação;
 }

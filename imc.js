@@ -14,11 +14,11 @@ function imc(){
             if (this.altura > 3) this.altura=this.altura/100
             const imc = this.peso/this.altura**2;
             if (imc < 18,5 ) this.classificacao = "magreza";
-            if (imc >= 18,5 &&  imc < 60,9 ) this.classificacao = "saudavel"
-            if (imc >= 65 &&  imc < 69,9 ) this.classificacao = "sobrepeso"
-            if (imc >= 70 &&  imc < 79,9 ) this.classificacao = "obesidade"
-            if (imc >= 80 &&  imc < 89,9 ) this.classificacao = "obesidade Severa"
-            if (imc >= 90 ) this.classificacao = "obesidade morbida"
+            if (imc >= 18,5 &&  imc < 75,9 ) this.classificacao = "saudavel"
+            if (imc >= 79,9 &&  imc < 80,9 ) this.classificacao = "sobrepeso"
+            if (imc >= 85,9 &&  imc < 89,9 ) this.classificacao = "obesidade"
+            if (imc >= 90 &&  imc < 95,9 ) this.classificacao = "obesidade Severa"
+            if (imc >= 99,9 ) this.classificacao = "obesidade morbida"
             return imc.toFixed(2);
         
             
@@ -29,5 +29,5 @@ function imc(){
     console.log(paciente)
     console.log(paciente.calcularIMC())
     let resposta=document.getElementById('resposta');
-    resposta.innerHTML="Seu IMC É "+paciente.calcularIMC()+". " + "Sua classificação de peso É " + paciente.classificacao;
+    resposta.innerHTML="Seu IMC É "+paciente.calcularIMC()+". " + "Sua classificação de peso É " + paciente.classificacão;
 }
